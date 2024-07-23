@@ -13,8 +13,8 @@
         // Executa a consulta
         $result = mysqli_query($con, $sql);
     ?>
-    <h1>Consulta de Clientes</h1>
-    <table align="center" border="1" width="500">
+    <h1><center>Consulta de Clientes</center></h1>
+    <table align="center" border="1" width="50%">
         <tr>
             <th>Código</th>
             <th>Nome</th>
@@ -34,6 +34,6 @@
             }
         ?>
     </table>
-    <p><a href="index.html">Voltar</a></p>
+    <p><center><a href="index.html">Voltar</a></center></p>
 </body>
 </html>
