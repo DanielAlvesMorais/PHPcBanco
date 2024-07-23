@@ -23,6 +23,25 @@
             <input type="password" name="senha" id="senha">
         </div>
         <div>
+            <label for="ativo">Ativo:<br></label>
+            <input type="radio" name="ativo" id="ativo" value="1">
+        </div>
+        <div>
+            <label for="Cidade">Cidade:<br></label>
+            <select name="cidade" id="cidade">
+                <?php
+                    include('conexao.php');
+                    $sql = "SELECT * FROM cidade";
+                    $result = mysqli_query($con,$sql);
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "<option value='".$row['idci']."'>".$row['nomeci']."/".$row['estadoci']."</option>";
+                    }
+                ?>
+            </select>
+        </div>
+        <br>
+        <div>
             <button type="submit">Cadastrar</button>
         </div>
     </fieldset>

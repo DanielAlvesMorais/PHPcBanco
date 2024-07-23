@@ -3,7 +3,9 @@
     $id = $_POST['id'];
     $email = $_POST['email'];
     $nome = $_POST['nome'];
-    $senha = $_POST['senha']
+    $senha = $_POST['senha'];
+    $ativo = $_POST['ativo'];
+    $cidade = $_POST['cidade']
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +22,8 @@
         echo "<p>Nome: $nome</p>";
         echo "<p>Email: $email</p>";
         echo "<p>Senha: $senha</p>";
-        $sql = "UPDATE Cliente SET nome = '$nome', email = '$email', senha = '$senha' WHERE id = $id";
+        echo "<p>Ativo: $ativo</p>";
+        $sql = "UPDATE Cliente SET nomecli = '$nome', emailcli = '$email', senhacli = '$senha', ativocli = '$ativo', cidade_id = '$cidade' WHERE idcli = $id";
         $result = mysqli_query($con, $sql);
         if($result)
             echo "Dados Atualizados!";

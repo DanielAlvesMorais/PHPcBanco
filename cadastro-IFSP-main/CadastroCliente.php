@@ -13,13 +13,16 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $ativo = $_POST['ativo'];
+        $cidade = $_POST['cidade'];
+
         echo "<h1>Dados do Cliente</h1>";
         echo "Nome: $nome<br>";
         echo "Email: $email<br>";
         // INSER INTO cidade(nome, estado);
         // VALUES ('$nome', '$estado');
-        $sql = "INSERT INTO cliente (nome, email, senha)";
-        $sql .= " VALUES('".$nome."','".$email."','".$senha."')";
+        $sql = "INSERT INTO cliente (nomecli, emailcli, senhacli, ativocli, cidade_id)";
+        $sql .= " VALUES('".$nome."','".$email."','".$senha."','".$ativo."','".$cidade."')";
         echo $sql;
         $result = mysqli_query($con,$sql);
         if($result){

@@ -16,7 +16,7 @@
         echo "Nome: $nome<br>";
         // INSER INTO cidade(nome, estado);
         // VALUES ('$nome', '$estado');
-        $sql = "INSERT INTO cidade (nome, estado)";
+        $sql = "INSERT INTO cidade (nomeci, estadoci)";
         $sql .= " VALUES('".$nome."','".$estado."')";
         echo $sql;
         $result = mysqli_query($con,$sql);

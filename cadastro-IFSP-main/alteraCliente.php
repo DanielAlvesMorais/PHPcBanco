@@ -1,7 +1,7 @@
 <?php
     include('includes/conexao.php');
     $id = $_GET['id'];
-    $sql = "SELECT * FROM cliente WHERE id=$id";
+    $sql = "SELECT * FROM cliente WHERE idcli=$id";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -20,17 +20,35 @@
         <legend>Cadastro de Clientes</legend>
         <div>
             <label for="nome">Nome:<br></label>
-            <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>">
+            <input type="text" name="nome" id="nome" value="<?php echo $row['nomecli']?>">
         </div>
         <div>
             <label for="nome">Email:<br></label>
-            <input type="email" name="email" id="email" value="<?php echo $row['email']?>">
+            <input type="email" name="email" id="email" value="<?php echo $row['emailcli']?>">
         </div>
         <div>
             <label for="nome">senha:<br></label>
-            <input type="password" name="senha" id="senha" value="<?php echo $row['senha']?>">
+            <input type="password" name="senha" id="senha" value="<?php echo $row['senhacli']?>">
         </div>
-        <input type="hidden" name="id" value="<?php echo $row['id']?>">
+        <div>
+            <label for="ativo">Ativo:<br></label>
+            <input type="radio" name="ativo" id="ativo" value="1">
+        </div>
+        <input type="hidden" name="id" value="<?php echo $row['idcli']?>">
+        <div>
+            <label for="Cidade">Cidade:<br></label>
+            <select name="cidade" id="cidade">
+                <?php
+                    include('include/conexao.php');
+                    $sql = "SELECT * FROM cidade";
+                    $result = mysqli_query($con,$sql);
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "<option value='".$row['idci']."'>".$row['nomeci']."/".$row['estadoci']."</option>";
+                    }
+                ?>
+            </select>
+        </div>
         <div>
             <button type="submit">Modificar</button>
         </div>

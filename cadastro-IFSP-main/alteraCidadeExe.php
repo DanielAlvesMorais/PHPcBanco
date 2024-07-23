@@ -19,7 +19,7 @@
         echo "<p>Id=$id</p>";
         echo "<p>Nome: $nome</p>";
         echo "<p>Estado: $estado</p>";
-        $sql = "UPDATE cidade SET nome = '$nome', estado = '$estado' WHERE id = $id";
+        $sql = "UPDATE cidade SET nomeci = '$nome', estadoci = '$estado' WHERE idci = $id";
         $result = mysqli_query($con, $sql);
         if($result)
             echo "Dados Atualizados!";

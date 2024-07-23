@@ -1,7 +1,7 @@
 <?php
     include('includes/conexao.php');
     $id = $_GET['id'];
-    $sql = "SELECT * FROM cidade WHERE id=$id";
+    $sql = "SELECT * FROM cidade WHERE idci=$id";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -20,67 +20,67 @@
         <legend>Cadastro de Cidades</legend>
         <div>
             <label for="nome">Nome:<br></label>
-            <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>">
+            <input type="text" name="nome" id="nome" value="<?php echo $row['nomeci']?>">
         </div>
         <div>
             <label for="nome">Estado:<br></label>
             <select name="estado" id="estado">
                 <option value="AC" 
-                    <?php echo $row['estado'] == "AC" ? "selected" : ""?> >Acre</option>
+                    <?php echo $row['estadoci'] == "AC" ? "selected" : ""?> >Acre</option>
                 <option value="AL"
-                    <?php echo $row['estado'] == "AL" ? "selected" : ""?> >Alagoas</option>
+                    <?php echo $row['estadoci'] == "AL" ? "selected" : ""?> >Alagoas</option>
                 <option value="AP"
-                    <?php echo $row['estado'] == "AP" ? "selected" : ""?> >Amapá</option>
+                    <?php echo $row['estadoci'] == "AP" ? "selected" : ""?> >Amapá</option>
                 <option value="AM"
-                    <?php echo $row['estado'] == "AM" ? "selected" : ""?> >Amazonas</option>
+                    <?php echo $row['estadoci'] == "AM" ? "selected" : ""?> >Amazonas</option>
                 <option value="BA"
-                    <?php echo $row['estado'] == "BA" ? "selected" : ""?> >Bahia</option>
+                    <?php echo $row['estadoci'] == "BA" ? "selected" : ""?> >Bahia</option>
                 <option value="CE"
-                    <?php echo $row['estado'] == "CE" ? "selected" : ""?> >Ceará</option>
+                    <?php echo $row['estadoci'] == "CE" ? "selected" : ""?> >Ceará</option>
                 <option value="DF"
-                    <?php echo $row['estado'] == "DF" ? "selected" : ""?> >Distrito Federal</option>
+                    <?php echo $row['estadoci'] == "DF" ? "selected" : ""?> >Distrito Federal</option>
                 <option value="ES"
-                    <?php echo $row['estado'] == "ES" ? "selected" : ""?> >Espírito Santo</option>
+                    <?php echo $row['estadoci'] == "ES" ? "selected" : ""?> >Espírito Santo</option>
                 <option value="GO"
-                    <?php echo $row['estado'] == "GO" ? "selected" : ""?> >Goiás</option>
+                    <?php echo $row['estadoci'] == "GO" ? "selected" : ""?> >Goiás</option>
                 <option value="MA"
-                    <?php echo $row['estado'] == "MA" ? "selected" : ""?> >Maranhão</option>
+                    <?php echo $row['estadoci'] == "MA" ? "selected" : ""?> >Maranhão</option>
                 <option value="MT"
-                    <?php echo $row['estado'] == "MT" ? "selected" : ""?> >Mato Grosso</option>
+                    <?php echo $row['estadoci'] == "MT" ? "selected" : ""?> >Mato Grosso</option>
                 <option value="MS"
-                    <?php echo $row['estado'] == "MS" ? "selected" : ""?> >Mato Grosso do Sul</option>
+                    <?php echo $row['estadoci'] == "MS" ? "selected" : ""?> >Mato Grosso do Sul</option>
                 <option value="MG"
-                    <?php echo $row['estado'] == "MG" ? "selected" : ""?> >Minas Gerais</option>
+                    <?php echo $row['estadoci'] == "MG" ? "selected" : ""?> >Minas Gerais</option>
                 <option value="PA"
-                    <?php echo $row['estado'] == "PA" ? "selected" : ""?> >Pará</option>
+                    <?php echo $row['estadoci'] == "PA" ? "selected" : ""?> >Pará</option>
                 <option value="PB"
-                    <?php echo $row['estado'] == "PB" ? "selected" : ""?> >Paraíba</option>
+                    <?php echo $row['estadoci'] == "PB" ? "selected" : ""?> >Paraíba</option>
                 <option value="PR"
-                    <?php echo $row['estado'] == "PR" ? "selected" : ""?> >Paraná</option>
+                    <?php echo $row['estadoci'] == "PR" ? "selected" : ""?> >Paraná</option>
                 <option value="PE"
-                    <?php echo $row['estado'] == "PE" ? "selected" : ""?> >Pernambuco</option>
+                    <?php echo $row['estadoci'] == "PE" ? "selected" : ""?> >Pernambuco</option>
                 <option value="PI"
-                    <?php echo $row['estado'] == "PI" ? "selected" : ""?> >Piauí</option>
+                    <?php echo $row['estadoci'] == "PI" ? "selected" : ""?> >Piauí</option>
                 <option value="RJ"
-                    <?php echo $row['estado'] == "RJ" ? "selected" : ""?> >Rio de Janeiro</option>
+                    <?php echo $row['estadoci'] == "RJ" ? "selected" : ""?> >Rio de Janeiro</option>
                 <option value="RN"
-                    <?php echo $row['estado'] == "RN" ? "selected" : ""?> >Rio Grande do Norte</option>
+                    <?php echo $row['estadoci'] == "RN" ? "selected" : ""?> >Rio Grande do Norte</option>
                 <option value="RS"
-                    <?php echo $row['estado'] == "RS" ? "selected" : ""?> >Rio Grande do Sul</option>
+                    <?php echo $row['estadoci'] == "RS" ? "selected" : ""?> >Rio Grande do Sul</option>
                 <option value="RO"
-                    <?php echo $row['estado'] == "RO" ? "selected" : ""?> >Rondônia</option>
+                    <?php echo $row['estadoci'] == "RO" ? "selected" : ""?> >Rondônia</option>
                 <option value="RR"
-                    <?php echo $row['estado'] == "RR" ? "selected" : ""?> >Roraima</option>
+                    <?php echo $row['estadoci'] == "RR" ? "selected" : ""?> >Roraima</option>
                 <option value="SC"
-                    <?php echo $row['estado'] == "SC" ? "selected" : ""?> >Santa Catarina</option>
+                    <?php echo $row['estadoci'] == "SC" ? "selected" : ""?> >Santa Catarina</option>
                 <option value="SP"
-                    <?php echo $row['estado'] == "SP" ? "selected" : ""?> >São Paulo</option>
+                    <?php echo $row['estadoci'] == "SP" ? "selected" : ""?> >São Paulo</option>
                 <option value="SE"
-                    <?php echo $row['estado'] == "SE" ? "selected" : ""?> >Sergipe</option>
+                    <?php echo $row['estadoci'] == "SE" ? "selected" : ""?> >Sergipe</option>
                 <option value="TO"
-                    <?php echo $row['estado'] == "TO" ? "selected" : ""?> >Tocantins</option>
+                    <?php echo $row['estadoci'] == "TO" ? "selected" : ""?> >Tocantins</option>
             </select>
-            <input type="hidden" name="id" value="<?php echo $row['id']?>">
+            <input type="hidden" name="id" value="<?php echo $row['idci']?>">
         </div>
         <div>
             <button type="submit">Modificar</button>
