@@ -12,8 +12,6 @@
         $sql = "SELECT * FROM cliente";
         // Executa a consulta
         $result = mysqli_query($con, $sql);
-        // Retorna apenas uma linha
-        $row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de Clientes</h1>
     <table align="center" border="1" width="500">
